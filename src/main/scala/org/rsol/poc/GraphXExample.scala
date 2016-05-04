@@ -31,10 +31,10 @@ object GraphXExample {
 
     println("triplet count " + graph.triplets.count())
     graph.triplets.filter(_.srcAttr != null).map(triplet =>
-    triplet.srcAttr.label + " --> " + triplet.attr  + " ---> " + triplet.dstAttr.label + " with user " + triplet.srcAttr.userId).collect().foreach { println _ }
+    triplet.srcAttr.nodeId + " --> " + triplet.attr  + " ---> " + triplet.dstAttr.nodeId + " with user " + triplet.srcAttr.userId).collect().foreach { println _ }
 
     graph.triplets.filter(_.srcAttr != null).filter(x => x.srcAttr.userId == "sambos").map(triplet =>
-    triplet.srcAttr.label + " --> " + triplet.attr  + " --> " + triplet.dstAttr.label + " with user " + triplet.srcAttr.userId).collect().foreach { println _ }
+    triplet.srcAttr.nodeId + " --> " + triplet.attr  + " --> " + triplet.dstAttr.nodeId + " with user " + triplet.srcAttr.userId).collect().foreach { println _ }
     
     sc.stop
   }

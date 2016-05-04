@@ -12,7 +12,13 @@
       <spark.version>1.5.1</spark.version>
       <jdk.version>1.7</jdk.version>
     </properties>
-    
+	   <repositories>
+	       <repository>
+	       <id>milestone.repo.springsource.org</id>
+	       <name>repo.springsource.org-milestone</name>
+	       <url>http://repo.spring.io/libs-milestone</url>
+   	       </repository>
+	   </repositories>
     <dependencies>
 	    <dependency>
 			<groupId>org.springframework</groupId>
